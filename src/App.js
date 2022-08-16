@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ResumeHeader from './components/ResumeHeader';
+import LeftColumn from './components/LeftColumn';
+import RightColumn from './components/RightColumn';
+import { Box } from '@mui/material';
+import Row from './components/Row';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box sx={{padding: '2%'}}>
+      <ResumeHeader/>
+      <Row>
+        <LeftColumn sx={{flex:1}}/>
+        <RightColumn sx={{flex:1}}/>
+      </Row>
+    </Box>
   );
 }
-
 export default App;
